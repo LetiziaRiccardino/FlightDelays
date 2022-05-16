@@ -1,6 +1,6 @@
 package it.polito.tdp.extflightdelays.model;
 
-public class Airport {
+public class Airport  implements Comparable<Airport>{
 	
 	private int id;
 	private String iataCode;
@@ -123,5 +123,11 @@ public class Airport {
 	public String toString() {
 		return "Airport [id=" + id + ", iataCode=" + iataCode + ", airportName=" + airportName + "]";
 	}
+
+	public int compareTo(Airport a) { //rivedi
+		return this.iataCode.compareTo(iataCode);
+	}
+	
+	
 	
 }
